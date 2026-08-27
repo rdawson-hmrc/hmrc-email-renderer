@@ -1,5 +1,0 @@
-@(params: Map[String, Any])
-A request was submitted for your application @{params("applicationname")} to access the @{params("apispecificationname")} in the @{params("environmentname")} environment. This request has now been approved.
-To access the application, visit /integration-hub on the MDTP admin network.
-Please note that you may still need to generate @{params("environmentname")} credentials if you have not done so already.
-From HMRC The Integration Hub

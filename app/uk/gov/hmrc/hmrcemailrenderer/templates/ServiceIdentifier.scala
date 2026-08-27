@@ -128,7 +128,6 @@ object ServiceIdentifier {
   case object HEC extends ServiceIdentifier { override val name = "hec" }
   case object EUSubsidy extends ServiceIdentifier { override val name = "euSubsidy" }
   case object EconomicCrimeLevy extends ServiceIdentifier { override val name = "ecl" }
-  case object Hipp extends ServiceIdentifier { override val name = "hipp" }
   case object PenReform extends ServiceIdentifier { override val name = "penaltyReform" }
   case object Tgp extends ServiceIdentifier { override val name = "tgp" }
   case object DigitalPlatformReporting extends ServiceIdentifier { override val name = "dprs" }

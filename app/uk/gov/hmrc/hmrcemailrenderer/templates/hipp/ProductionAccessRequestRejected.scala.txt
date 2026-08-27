@@ -1,4 +1,0 @@
-@(params: Map[String, Any])
-A request was submitted for your application @{params("applicationname")} to access the @{params("apispecificationname")} in the @{params("environmentname")} environment. This request has been rejected.
-To access the application, visit /integration-hub on the MDTP admin network.
-From HMRC The Integration Hub

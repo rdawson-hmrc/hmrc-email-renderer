@@ -1,4 +1,0 @@
-@(params: Map[String, Any])
-You have been added as a team member to @{params("teamname")} within The Integration Hub.
-To access the team, visit /integration-hub on the MDTP admin network.
-From HMRC The Integration Hub
