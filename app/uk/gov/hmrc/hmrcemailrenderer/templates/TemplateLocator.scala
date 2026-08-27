@@ -28,6 +28,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ated.AtedTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.ats.AtsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.awrs.AwrsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.bars.BarsTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.bars.BarsTemplates.barsGroup
 import uk.gov.hmrc.hmrcemailrenderer.templates.cbcr.CBCRTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cbcrnew.CBCRNewTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cir.CirTemplates
@@ -62,6 +63,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates.raldGroup
 import uk.gov.hmrc.hmrcemailrenderer.templates.registeryourcompany.RegisterYourCompanyTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.sdil.SdilTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.sdlt.SdltTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tamc.TamcTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tcs.TcsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.transactionengine.TransactionEngineTemplates
@@ -86,9 +88,9 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.contactF
 import uk.gov.hmrc.hmrcemailrenderer.templates.dass.DASSTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.dasstechrefresh.DassTechRefreshTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.dprs.DprsTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.dsao.DsaoTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.ecl.EclTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.euSubsidy.EUSubsidyTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.oss.OSSTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.hec.HecTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.itsa.ItsaTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.mtdfb.vatreg.VatRegTemplates
@@ -106,6 +108,10 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates.tctrGroup
 import uk.gov.hmrc.hmrcemailrenderer.templates.tgp.TgpTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tre.treTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.carf.CARFTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.lepp.LEPPTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.olg.OlgTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.childbenefit.ChildBenefitTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.vpd.VPDTemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
@@ -118,7 +124,7 @@ trait TemplateLocator {
       "AWRS"                  -> AwrsTemplates.templates,
       "AMLS"                  -> AmlsTemplates.templates,
       "ARS"                   -> ArsTemplates.templates,
-      "BARS"                  -> BarsTemplates.templates,
+      barsGroup               -> BarsTemplates.templates,
       "Childcare"             -> ChildcareTemplates.templates,
       "CIR"                   -> CirTemplates.templates,
       "DAC6"                  -> Dac6Templates.templates,
@@ -162,6 +168,7 @@ trait TemplateLocator {
       "Lost Credentials"      -> LostCredentialsTemplates.templates,
       "FHDDS"                 -> FhddsTemplates.templates,
       "SDIL"                  -> SdilTemplates.templates,
+      "SDLT"                  -> SdltTemplates.templates,
       "CCA"                   -> CCATemplates.templates,
       "CDS"                   -> cdsTestTemplates.templates,
       "MTDfB-VAT"             -> MtdfbVatTemplates.templates,
@@ -179,7 +186,6 @@ trait TemplateLocator {
       "Eori Common Component" -> EoriCommonComponentTemplates.templates,
       "MODS"                  -> ModsTemplates.templates,
       "CDSRC"                 -> cdsrcTemplates.templates,
-      "OSS"                   -> OSSTemplates.templates,
       "HEC"                   -> HecTemplates.templates,
       "EU Subsidy"            -> EUSubsidyTemplates.templates,
       "ITSA"                  -> ItsaTemplates.templates,
@@ -189,14 +195,20 @@ trait TemplateLocator {
       "Penalty Reform"        -> PenReformTemplates.templates,
       "TGP"                   -> TgpTemplates.templates,
       "DPRS"                  -> DprsTemplates.templates,
+      "DSAO"                  -> DsaoTemplates.templates,
       "IOSS NETP"             -> IossNetpTemplates.templates,
       "TRE"                   -> treTemplates.templates,
+      "Pillar 2"              -> Pillar2Templates.templates,
       FeedbackTemplates.id    -> FeedbackTemplates.templates,
       "NGR"                   -> NgrTemplates.templates,
       "AD"                    -> ADTemplates.templates,
       "LTAOATC"               -> LtaoatcTemplates.templates,
       "Personal Tax"          -> NIRefTemplates.templates,
-      "Pillar 2"              -> Pillar2Templates.templates
+      "Pillar 2"              -> Pillar2Templates.templates,
+      "LEPP"                  -> LEPPTemplates.templates,
+      "OLG"                   -> OlgTemplates.templates,
+      "Child Benefit"         -> ChildBenefitTemplates.templates,
+      "VPD"                   -> VPDTemplates.templates
     )
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq

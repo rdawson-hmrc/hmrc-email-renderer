@@ -86,6 +86,78 @@ object AgentTemplates {
       htmlTemplate = html.agent_services_account_created.f,
       priority = Some(MessagePriority.Urgent)
     ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "agent_registration_success",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = params => s"Update: application ${params("applicationRef")} for an agent services account",
+      plainTemplate = txt.agent_registration_success.f,
+      htmlTemplate = html.agent_registration_success.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "agent_registration_application_non_fixable_failure",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = params => s"Update: application ${params("applicationRef")} for an agent services account",
+      plainTemplate = txt.agent_registration_application_non_fixable_failure.f,
+      htmlTemplate = html.agent_registration_application_non_fixable_failure.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "agent_registration_individual_non_fixable_failure",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = "Update: application outcome decision (agent services account)",
+      plainTemplate = txt.agent_registration_individual_non_fixable_failure.f,
+      htmlTemplate = html.agent_registration_individual_non_fixable_failure.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "agent_registration_application_submission_confirmation",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = params => s"Update: application ${params("applicationRef")} for an agent services account",
+      plainTemplate = txt.agent_registration_application_submission_confirmation.f,
+      htmlTemplate = html.agent_registration_application_submission_confirmation.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "agent_services_subscription_complete",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = params => s"HMRC: Your ${params("serviceName")} agent code is ready",
+      plainTemplate = txt.agent_services_subscription_complete.f,
+      htmlTemplate = html.agent_services_subscription_complete.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "agent_services_subscription_complete_cy",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = params => s"CThEF: Mae eich cod asiant ar gyfer ${params("serviceName")} yn barod",
+      plainTemplate = txt.agent_services_subscription_complete_cy.f,
+      htmlTemplate = html.agent_services_subscription_complete_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "agent_services_subscription_fail",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = params => s"HMRC: We could not generate your ${params("serviceName")} agent code",
+      plainTemplate = txt.agent_services_subscription_fail.f,
+      htmlTemplate = html.agent_services_subscription_fail.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "agent_services_subscription_fail_cy",
+      fromAddress = FromAddress.noReply("Gwasanaethau Asiant CThEF"),
+      service = Agent,
+      subject = params => s"CThEF: Nid oedd modd i ni greu y cod asiant ar gyfer ${params("serviceName")} i chi",
+      plainTemplate = txt.agent_services_subscription_fail_cy.f,
+      htmlTemplate = html.agent_services_subscription_fail_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.create(
       templateId = "agent_services_account_created_cy",
       fromAddress = FromAddress.noReply("Gwasanaethau Asiant CThEF"),

@@ -19,6 +19,8 @@ package uk.gov.hmrc.hmrcemailrenderer.templates
 sealed trait ServiceIdentifier extends Product with Serializable {
   def name: String
 }
+
+// scalastyle:off
 object ServiceIdentifier {
   case object AdvanceValuationRulingsService extends ServiceIdentifier { override val name = "ars" }
   case object AEOMRA extends ServiceIdentifier { override val name = "aeo-mra" }
@@ -132,10 +134,18 @@ object ServiceIdentifier {
   case object DigitalPlatformReporting extends ServiceIdentifier { override val name = "dprs" }
   case object IossNetp extends ServiceIdentifier { override val name = "ioss-netp" }
   case object TradeReportingExtracts extends ServiceIdentifier { override val name = "tre" }
+  case object SeniorAccountingOfficer extends ServiceIdentifier { override val name = "dsao" }
 
   case object Feedback extends ServiceIdentifier { override val name = "feedback" }
   case object NgrNotify extends ServiceIdentifier { override val name = "ngr-notify" }
   case object LTAOATC extends ServiceIdentifier { override val name = "ltaoatc" }
   case object PersonalTax extends ServiceIdentifier { override val name = "personal-tax" }
   case object Pillar2 extends ServiceIdentifier { override val name = "pillar2" }
+
+  case object PensionsAndSavings extends ServiceIdentifier { override val name = "pensions-and-savings" }
+  case object OneLoginGateway extends ServiceIdentifier { override val name = "olg" }
+
+  case object ChildBenefit extends ServiceIdentifier { override val name = "cb" }
+  case object VPD extends ServiceIdentifier { override val name = "vaping-products-duty" }
 }
+// scalastyle:on

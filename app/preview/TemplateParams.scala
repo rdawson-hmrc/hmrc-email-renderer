@@ -73,6 +73,30 @@ object TemplateParams {
         "team_name"         -> "CIR",
         "verification_code" -> "ABCDEF"
       ),
+      "dsao_registration_confirmation" -> Map(
+        "recipientName"     -> "Richard Wilson",
+        "companyName"       -> "ABC Ltd",
+        "submittedDateTime" -> "17 January 2025 at 11:45am",
+        "referenceId"       -> "SAOREG0123456789"
+      ),
+      "dsao_notification_confirmation" -> Map(
+        "recipientName"     -> "Richard Wilson",
+        "companyName"       -> "ABC Ltd",
+        "submittedDateTime" -> "17 January 2025 at 11:45am",
+        "referenceId"       -> "SAONOT0123456789"
+      ),
+      "dsao_certificate_confirmation_for_submitter" -> Map(
+        "recipientName"     -> "Richard Wilson",
+        "submitterName"     -> "Jane Smith",
+        "saoName"           -> "Richard Wilson",
+        "submittedDateTime" -> "17 January 2025 at 11:45am UK time",
+        "referenceId"       -> "SAOCER0123456789"
+      ),
+      "dsao_certificate_confirmation_for_sao" -> Map(
+        "recipientName"     -> "Richard Wilson",
+        "submittedDateTime" -> "17 January 2025 at 11:45am",
+        "referenceId"       -> "SAOCER0123456789"
+      ),
       "client_rejected_authorisation_request" -> Map(
         "agencyName" -> "Agent 1",
         "clientName" -> "Client 2",
@@ -97,6 +121,43 @@ object TemplateParams {
       "agent_services_account_created_cy" -> Map(
         "agencyName" -> "Agent 1",
         "arn"        -> "XARN 123 4567"
+      ),
+      "agent_services_subscription_complete" -> Map(
+        "agencyName"         -> "Agent 1",
+        "serviceName"        -> "PAYE/CIS",
+        "serviceSectionName" -> "Pay as you earn (PAYE)/Construction Industry Scheme (CIS)",
+        "agentCode"          -> "AB1234"
+      ),
+      "agent_services_subscription_complete_cy" -> Map(
+        "agencyName"         -> "Agent 1",
+        "serviceName"        -> "TWE/CIS",
+        "serviceSectionName" -> "Talu wrth ennill (TWE)/Cynllun y Diwydiant Adeiladu (CIS)",
+        "agentCode"          -> "AB1234"
+      ),
+      "agent_services_subscription_fail" -> Map(
+        "agencyName"  -> "Agent 1",
+        "serviceName" -> "PAYE/CIS"
+      ),
+      "agent_services_subscription_fail_cy" -> Map(
+        "agencyName"  -> "Agent 1",
+        "serviceName" -> "TWE/CIS"
+      ),
+      "agent_registration_success" -> Map(
+        "agentName"      -> "Taylor Reed",
+        "applicationRef" -> "ABC123456",
+        "businessName"   -> "Example Tax Advisers Ltd"
+      ),
+      "agent_registration_application_non_fixable_failure" -> Map(
+        "agentName"      -> "Taylor Reed",
+        "applicationRef" -> "HDJ2123F"
+      ),
+      "agent_registration_individual_non_fixable_failure" -> Map(
+        "individualName" -> "Abed Nadir"
+      ),
+      "agent_registration_application_submission_confirmation" -> Map(
+        "agentName"                 -> "Taylor Reed",
+        "applicationRef"            -> "ABC123456",
+        "applicationProcessingTime" -> "6 Weeks"
       ),
       "agent_invitations_about_to_expire" -> Map(
         "agencyName"          -> "My Tax Agency",
@@ -672,6 +733,44 @@ object TemplateParams {
       "crs_fatca_registration_successful" -> Map(
         "name" -> "Joe Bloggs"
       ),
+      "crs_fatca_file_upload_unsuccessful" -> Map(
+        "regime"           -> "CRS",
+        "contactName"      -> "Ashley Smith",
+        "submittedTime"    -> "11:25am",
+        "submittedDate"    -> "20 May 2024",
+        "messageRefId"     -> "ABCDE12345",
+        "sendingCompanyIN" -> "1234567890",
+        "reportType"       -> "Nil report",
+        "reportingName"    -> "FI Name",
+        "reportingPeriod"  -> "3 July 2023",
+        "businessName"     -> "UserBusinessName"
+      ),
+      "crs_fatca_fi_upload_successful" -> Map(
+        "regime"          -> "FATCA",
+        "contactName"     -> "Ashley Smith",
+        "submittedTime"   -> "11:25am",
+        "submittedDate"   -> "20 May 2024",
+        "messageRefId"    -> "ABCDE12345",
+        "reportingName"   -> "FI Name",
+        "reportingFIName" -> "reporting FI Name",
+        "reportingPeriod" -> "3 July 2023",
+        "businessName"    -> "UserBusinessName",
+        "reportType"      -> "Nil report"
+      ),
+      "crs_fatca_user_upload_successful" -> Map(
+        "regime"           -> "FATCA",
+        "contactName"      -> "Ashley Smith",
+        "submittedTime"    -> "11:25am",
+        "submittedDate"    -> "20 May 2024",
+        "messageRefId"     -> "ABCDE12345",
+        "sendingCompanyIN" -> "1234567890",
+        "reportingName"    -> "FI Name",
+        "reportingFIName"  -> "reporting FI Name",
+        "reportingPeriod"  -> "3 July 2023",
+        "businessName"     -> "UserBusinessName",
+        "reportType"       -> "Nil report",
+        "isFIUser"         -> "true"
+      ),
       "carf_registration_successful" -> Map(
         "name"          -> "Ashley Smith",
         "carfReference" -> "XXCAR0012345678"
@@ -708,6 +807,20 @@ object TemplateParams {
       ),
       "tax_estimate_message_alert_cy" -> Map(
         "fullName" -> "Mr Joe Bloggs"
+      ),
+      "daily_tax_estimate_message_alert" -> Map(
+        "fullName" -> "Leslie Carter"
+      ),
+      "daily_tax_estimate_message_alert_cy" -> Map(
+        "fullName" -> "Leslie Carter"
+      ),
+      "annual_tax_estimate_message_alert" -> Map(
+        "fullName" -> "Leslie Carter",
+        "taxYear"  -> "2027"
+      ),
+      "annual_tax_estimate_message_alert_cy" -> Map(
+        "fullName" -> "Leslie Carter",
+        "taxYear"  -> "2027"
       ),
       "fandf_ask_help_notification" -> Map(
         "helperLastName"  -> "Bloggs",
@@ -824,14 +937,14 @@ object TemplateParams {
         "baRefNumber"   -> "BA : ba5090",
         "fileName"      -> "File name : Barnet_CT.xml",
         "dateSubmitted" -> "Date Submitted : 2016-08-09T14:02:09.747+01:00",
-        "errorList"     -> "Brap Brap"
+        "errorList"     -> "Errors UNKNOWN_ERROR: Unable to process upload"
       ),
       "bars_alert_transaction" -> Map(
         "baRefNumber"   -> "BA : ba5090",
         "transactionId" -> "Transaction id : 78918c8a-216a-4472-b886-9b81fcf4f64d",
         "fileName"      -> "File name : Barnet_CT.xml",
         "dateSubmitted" -> "Date Submitted : 2016-08-09T14:02:09.747+01:00",
-        "errorList"     -> "Brap Brap"
+        "errorList"     -> "Errors UNKNOWN_ERROR: Unable to process upload"
       ),
       "register_your_company_welcome_email" -> Map(
         "returnLink" -> "http://registeryourcompany.gov.uk"
@@ -1784,6 +1897,53 @@ object TemplateParams2 {
       "full_name"      -> "Abed Nadir",
       "correlation_id" -> "HJ345HJ345HJ342N3H5JK4ITURY84783"
     ),
+    "emac_helpdesk_bulk_deenrolment_file_upload_failure" -> Map(
+      "requestorName"    -> "John Doe",
+      "fileName"         -> "testFile1.csv",
+      "uploadedDateTime" -> "20-02-2026 12:00",
+      "reference"        -> "12345678-ab12-43cd-5ef7-123456ab",
+      "failureReason"    -> "QUARANTINE",
+      "failureMessage"   -> "This file has a virus"
+    ),
+    "emac_helpdesk_bulk_deenrolment_file_upload_scan_success" -> Map(
+      "requestorName"    -> "John Doe",
+      "fileName"         -> "testFile1.csv",
+      "uploadedDateTime" -> "20-02-2026 12:00",
+      "reference"        -> "12345678-ab12-43cd-5ef7-123456ab",
+      "fileExpiryDays"   -> "60"
+    ),
+    "emac_helpdesk_bulk_deenrolment_file_rejected_by_approver" -> Map(
+      "requestorName"    -> "John Doe",
+      "fileName"         -> "testFile1.csv",
+      "uploadedDateTime" -> "20-02-2026 12:00",
+      "approverName"     -> "Jane Doe",
+      "approverEmail"    -> "Jane.Doe@test.com",
+      "reference"        -> "12345678-ab12-43cd-5ef7-123456ab"
+    ),
+    "emac_helpdesk_bulk_deenrolment_file_approved" -> Map(
+      "requestorName"    -> "John Doe",
+      "fileName"         -> "testFile1.csv",
+      "uploadedDateTime" -> "20-02-2026 12:00",
+      "approverName"     -> "Jane Doe",
+      "approverEmail"    -> "Jane.Doe@test.com",
+      "reference"        -> "12345678-ab12-43cd-5ef7-123456ab"
+    ),
+    "emac_helpdesk_bulk_deenrolment_file_processed" -> Map(
+      "requestorName"         -> "John Doe",
+      "fileName"              -> "testFile1.csv",
+      "uploadedDateTime"      -> "20-02-2026 12:00",
+      "reference"             -> "12345678-ab12-43cd-5ef7-123456ab",
+      "totalRecordCount"      -> "8",
+      "successfulRecordCount" -> "5",
+      "failedRecordCount"     -> "3"
+    ),
+    "emac_helpdesk_bulk_deenrolment_file_auto_deleted" -> Map(
+      "requestorName"    -> "John Doe",
+      "fileName"         -> "testFile1.csv",
+      "uploadedDateTime" -> "20-02-2026 12:00",
+      "fileExpiryDays"   -> "8",
+      "reference"        -> "12345678-ab12-43cd-5ef7-123456ab"
+    ),
     "emac_activation_code_not_received" -> Map(
       "serviceName" -> "Enrolment Team",
       "name"        -> "David Smith"
@@ -1835,34 +1995,6 @@ object TemplateParams2 {
     "fhdds_submission_deregister" -> Map(
       "deregisterDate" -> "6 June 2018"
     ),
-    "oss_registration_confirmation" -> Map(
-      "recipientName_line1"  -> "Joe Bloggs",
-      "businessName"         -> "Test Business",
-      "periodOfFirstReturn"  -> "July to September 2021",
-      "firstDayOfNextPeriod" -> "1 October 2021",
-      "commencementDate"     -> "12 June 2021",
-      "redirectLink"         -> "http://test.com/blah-blah"
-    ),
-    "oss_returns_email_confirmation" -> Map(
-      "recipientName_line1" -> "Joe Bloggs",
-      "businessName"        -> "Test Business",
-      "period"              -> "1 July to 30 September 2021",
-      "paymentDeadline"     -> "31 October 2021"
-    ),
-    "oss_returns_email_confirmation_no_vat_owed" -> Map(
-      "recipientName_line1" -> "Joe Bloggs",
-      "period"              -> "1 July to 30 September 2021"
-    ),
-    "oss_overdue_returns_email_confirmation" -> Map(
-      "recipientName_line1" -> "Joe Bloggs",
-      "businessName"        -> "Test Business",
-      "period"              -> "1 July to 30 September 2021",
-      "paymentDeadline"     -> "31 October 2021"
-    ),
-    "oss_registration_amendment_confirmation" -> Map(
-      "recipientName_line1" -> "Joe Bloggs",
-      "amendmentDate"       -> "23 May 2023"
-    ),
     "platformContact" -> Map(
       "apiTitle"    -> "Individuals Tax Relief for Kitten Ownership",
       "senderName"  -> "Alice Example",
@@ -1885,6 +2017,13 @@ object TemplateParams2 {
       "apiEmail"         -> "api-platform@example.com"
     ),
     "telephone_payments_service" -> Map(
+      "totalAmountPaid"      -> "1000.00",
+      "transactionReference" -> "12345FFF",
+      "cardType"             -> "Visa Debit",
+      "cardNumber"           -> "1234",
+      "tpsPaymentItemsForEmail" -> "[{\"taxType\":\"P800\",\"amount\":\"1.92\",\"transactionFee\":\"1.00\",\"transactionNumber\":\"12345\"}]"
+    ),
+    "telephone_payments_service_cy" -> Map(
       "totalAmountPaid"      -> "1000.00",
       "transactionReference" -> "12345FFF",
       "cardType"             -> "Visa Debit",
@@ -2161,6 +2300,10 @@ object TemplateParams2 {
     "parcels_registration_confirmation" -> Map(
       "name"            -> "Joe Bloggs",
       "referenceNumber" -> "IM123456789A"
+    ),
+    "sdlt_submission_confirmation" -> Map(
+      "purchaserName" -> "John Doe",
+      "utrn"          -> "UTRN0113"
     ),
     "digital_tariffs_case_completed" -> Map(
       "recipientName_line1" -> "FULL NAME",
@@ -2442,10 +2585,11 @@ object TemplateParams2 {
       "serviceContent"         -> "Erbyn hyn, gallwch wneud cais am Ddyfarniad Tariffau Uwch."
     ),
     "ecc_subscription_not_successful" -> Map(
-      "recipientName_FullName" -> "Jane Jones",
-      "recipientOrgName"       -> "JJ Components",
-      "serviceName"            -> "Advance Tariff Rulings",
-      "completionDate"         -> "22 March 2019"
+      "recipientName_FullName" -> "Harry Potter",
+      "recipientOrgName"       -> "Hogwarts Trains",
+      "serviceName"            -> "Customs Declaration Service",
+      "completionDate"         -> "17 June 2026",
+      "enrolmentKey"           -> "HMRC-CUS-ORG"
     ),
     "ecc_subscription_not_successful_cy" -> Map(
       "recipientName_FullName" -> "Jane Jones",
@@ -2581,6 +2725,9 @@ object TemplateParams2 {
       "eori"                      -> "GB123456789000000"
     ),
     "dmsdoc_notification" -> Map(
+      "mrn" -> "18GB9JLC3CU1LFGVR1"
+    ),
+    "dmsdet_notification" -> Map(
       "mrn" -> "18GB9JLC3CU1LFGVR1"
     ),
     "customs_rcm_notifications" -> Map(
@@ -3181,34 +3328,6 @@ object TemplateParams2 {
     "newMessageAlert_PA302_D2_cy" -> newMessageAlert_Names,
     "new_message_alert_itsa"      -> newMessageAlert_Names,
     "new_message_alert_itsa_cy"   -> newMessageAlert_Names,
-    "oss_registration_confirmation" -> Map(
-      "recipientName_line1"  -> "Joe Bloggs",
-      "businessName"         -> "Test Business",
-      "periodOfFirstReturn"  -> "July to September 2021",
-      "firstDayOfNextPeriod" -> "1 October 2021",
-      "commencementDate"     -> "12 June 2021",
-      "redirectLink"         -> "http://test.com/blah-blah"
-    ),
-    "oss_returns_email_confirmation" -> Map(
-      "recipientName_line1" -> "Joe Bloggs",
-      "businessName"        -> "Test Business",
-      "period"              -> "1 July to 30 September 2021",
-      "paymentDeadline"     -> "31 October 2021"
-    ),
-    "oss_returns_email_confirmation_no_vat_owed" -> Map(
-      "recipientName_line1" -> "Joe Bloggs",
-      "period"              -> "1 July to 30 September 2021"
-    ),
-    "oss_overdue_returns_email_confirmation" -> Map(
-      "recipientName_line1" -> "Joe Bloggs",
-      "businessName"        -> "Test Business",
-      "period"              -> "1 July to 30 September 2021",
-      "paymentDeadline"     -> "31 October 2021"
-    ),
-    "oss_registration_amendment_confirmation" -> Map(
-      "recipientName_line1" -> "Joe Bloggs",
-      "amendmentDate"       -> "23 May 2023"
-    ),
     "pods_psa_amend" -> Map(
       "psaName" -> "Jane Doe"
     ),
@@ -3295,7 +3414,51 @@ object TemplateParams3 {
     "open_banking_payment_successful" -> Map(
       "taxType"    -> "Self Assessment",
       "reference"  -> "1234567890K",
-      "amountPaid" -> "123.45"
+      "amountPaid" -> "£123.45"
+    ),
+    "open_banking_payment_successful_class3Ni_single" -> Map(
+      "taxType"      -> "Voluntary Class 3 National Insurance",
+      "reference"    -> "1234567890K",
+      "amountPaid"   -> "£123.45",
+      "numberOfRows" -> "1",
+      "taxYear1"     -> "2020 to 2021",
+      "amount1"      -> "£123.45",
+      "totalAmount"  -> "£123.45"
+    ),
+    "open_banking_payment_successful_class3Ni_single_cy" -> Map(
+      "taxType"      -> "Voluntary Class 3 National Insurance",
+      "reference"    -> "1234567890K",
+      "amountPaid"   -> "£123.45",
+      "numberOfRows" -> "1",
+      "taxYear1"     -> "2020 to 2021",
+      "amount1"      -> "£123.45",
+      "totalAmount"  -> "£123.45"
+    ),
+    "open_banking_payment_successful_class3Ni_multiple" -> Map(
+      "taxType"      -> "Voluntary Class 3 National Insurance",
+      "reference"    -> "1234567890K",
+      "amountPaid"   -> "£123.45",
+      "numberOfRows" -> "3",
+      "taxYear1"     -> "2020 to 2021",
+      "amount1"      -> "£123.45",
+      "taxYear2"     -> "2021 to 2022",
+      "amount2"      -> "£123.45",
+      "taxYear3"     -> "2022 to 2023",
+      "amount3"      -> "£123.45",
+      "totalAmount"  -> "£370.35"
+    ),
+    "open_banking_payment_successful_class3Ni_multiple_cy" -> Map(
+      "taxType"      -> "Voluntary Class 3 National Insurance",
+      "reference"    -> "1234567890K",
+      "amountPaid"   -> "£123.45",
+      "numberOfRows" -> "3",
+      "taxYear1"     -> "2020 to 2021",
+      "amount1"      -> "£123.45",
+      "taxYear2"     -> "2021 to 2022",
+      "amount2"      -> "£123.45",
+      "taxYear3"     -> "2022 to 2023",
+      "amount3"      -> "£123.45",
+      "totalAmount"  -> "£370.35"
     ),
     "open_banking_payment_successful_fdp" -> Map(
       "taxType"              -> "Self Assessment",
@@ -4022,6 +4185,9 @@ object TemplateParams3 {
       "month" -> "September",
       "year"  -> "2025"
     ),
+    "dtr_subcontractor_verification" -> Map(
+      "" -> ""
+    ),
     "overseas_transfer_charge_confirm_transfer_submitted" -> Map(
       "qtReference"       -> "QT123456",
       "memberName"        -> "Trixie Mattel",
@@ -4090,6 +4256,18 @@ object TemplateParams3 {
             "description": "The referenced file contains one or more records with a DocTypeIndic value in the range OECD10-OECD13, indicating test data. As a result, the receiving Competent Authority cannot accept this file as a valid GIR file submission."
           }
         ]"""))
+    ),
+    "pillar2_confirmation_email" -> Map(
+      "confirmationDate"      -> "3 October 2025",
+      "confirmationTime"      -> "2:45pm",
+      "requestType"           -> "UK Tax Return",
+      "accountingPeriodStart" -> "1 April 2024",
+      "accountingPeriodEnd"   -> "31 March 2025"
+    ),
+    "one_login_setup_complete" -> Map(
+      "obfuscatedEmail" -> "j***@example.com",
+      "ggIdEnding"      -> "1234"
     )
   )
+
 }

@@ -61,6 +61,42 @@ object OnlinePaymentServiceTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "open_banking_payment_successful_class3Ni_single",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "You sent a payment to HMRC",
+      plainTemplate = txt.open_banking_payment_successful.f,
+      htmlTemplate = html.open_banking_payment_successful.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "open_banking_payment_successful_class3Ni_single_cy",
+      fromAddress = FromAddress.noReply("O Daliadau Ar-lein CThEF"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Rydych wedi anfon taliad i CThEF",
+      plainTemplate = txt.open_banking_payment_successful_cy.f,
+      htmlTemplate = html.open_banking_payment_successful_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "open_banking_payment_successful_class3Ni_multiple",
+      fromAddress = FromAddress.noReply("O Daliadau Ar-lein CThEF"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Rydych wedi anfon taliad i CThEF",
+      plainTemplate = txt.open_banking_payment_successful.f,
+      htmlTemplate = html.open_banking_payment_successful.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "open_banking_payment_successful_class3Ni_multiple_cy",
+      fromAddress = FromAddress.noReply("O Daliadau Ar-lein CThEF"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Rydych wedi anfon taliad i CThEF",
+      plainTemplate = txt.open_banking_payment_successful_cy.f,
+      htmlTemplate = html.open_banking_payment_successful_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "open_banking_payment_successful_cy",
       fromAddress = FromAddress.noReply("O Daliadau Ar-lein CThEF"),
       service = ServiceIdentifier.OnlinePaymentService,
@@ -296,6 +332,15 @@ object OnlinePaymentServiceTemplates {
       subject = "HMRC Payment confirmation",
       plainTemplate = txt.telephone_payments_service.f,
       htmlTemplate = html.telephone_payments_service.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "telephone_payments_service_cy",
+      fromAddress = FromAddress.noReply("O Daliadau Ar-lein CThEF"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Cadarnhad gan CThEF o daliad",
+      plainTemplate = txt.telephone_payments_service_cy.f,
+      htmlTemplate = html.telephone_payments_service_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(

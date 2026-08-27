@@ -1,0 +1,31 @@
+@(params: Map[String, Any])You have changed the way you sign in to HMRC
+
+Dear Customer,
+
+From now on:
+
+- use GOV.UK One Login when you sign in to HMRC services
+- sign in using your email address @{params.get("obfuscatedEmail")} and password
+- do not use your Government Gateway user ID ending in @{params.get("ggIdEnding")}
+
+You do not need to do anything else
+
+The change is complete. Continue to sign in to HMRC services using GOV.UK One Login.
+
+If you did not make this change
+
+If you do not recognise this change and cannot access your account, you will need to create a GOV.UK One Login
+
+To create a GOV.UK One Login:
+
+1. Go to GOV.UK.
+2. Search for 'HMRC online services: sign in or set up an account'.
+3. Select 'Sign in', then select 'Create new sign in details'.
+
+For security reasons, this email does not contain any links.
+
+This is an automated email. Do not reply to it.
+
+From HMRC
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

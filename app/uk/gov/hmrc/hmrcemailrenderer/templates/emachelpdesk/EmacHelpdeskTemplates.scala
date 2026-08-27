@@ -40,6 +40,60 @@ object EmacHelpdeskTemplates {
       plainTemplate = txt.emacHelpdeskSuccessfulConfirmationEmail.f,
       htmlTemplate = html.emacHelpdeskSuccessfulConfirmationEmail.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "emac_helpdesk_bulk_deenrolment_file_upload_failure",
+      fromAddress = FromAddress.noReply("HMRC Services and Enrolments helpdesk"),
+      service = EmacHelpdesk,
+      subject = "Bulk de-enrolment file upload failure",
+      plainTemplate = txt.emacHelpdeskBulkDeenrolmentFileUploadFailure.f,
+      htmlTemplate = html.emacHelpdeskBulkDeenrolmentFileUploadFailure.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "emac_helpdesk_bulk_deenrolment_file_upload_scan_success",
+      fromAddress = FromAddress.noReply("HMRC Services and Enrolments helpdesk"),
+      service = EmacHelpdesk,
+      subject = "Bulk de-enrolment file uploaded successfully",
+      plainTemplate = txt.emacHelpdeskBulkDeenrolmentFileUploadScanSuccess.f,
+      htmlTemplate = html.emacHelpdeskBulkDeenrolmentFileUploadScanSuccess.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "emac_helpdesk_bulk_deenrolment_file_rejected_by_approver",
+      fromAddress = FromAddress.noReply("HMRC Services and Enrolments helpdesk"),
+      service = EmacHelpdesk,
+      subject = "Bulk de-enrolment file rejected by approver",
+      plainTemplate = txt.emacHelpdeskBulkDeenrolmentFileRejectedByApprover.f,
+      htmlTemplate = html.emacHelpdeskBulkDeenrolmentFileRejectedByApprover.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "emac_helpdesk_bulk_deenrolment_file_approved",
+      fromAddress = FromAddress.noReply("HMRC Services and Enrolments helpdesk"),
+      service = EmacHelpdesk,
+      subject = "Bulk de-enrolment file approved",
+      plainTemplate = txt.emacHelpdeskBulkDeenrolmentFileApproved.f,
+      htmlTemplate = html.emacHelpdeskBulkDeenrolmentFileApproved.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "emac_helpdesk_bulk_deenrolment_file_processed",
+      fromAddress = FromAddress.noReply("HMRC Services and Enrolments helpdesk"),
+      service = EmacHelpdesk,
+      subject = "Bulk de-enrolment file processed",
+      plainTemplate = txt.emacHelpdeskBulkDeenrolmentFileProcessed.f,
+      htmlTemplate = html.emacHelpdeskBulkDeenrolmentFileProcessed.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "emac_helpdesk_bulk_deenrolment_file_auto_deleted",
+      fromAddress = FromAddress.noReply("HMRC Services and Enrolments helpdesk"),
+      service = EmacHelpdesk,
+      subject = "Bulk de-enrolment file automatically deleted",
+      plainTemplate = txt.emacHelpdeskBulkDeenrolmentFileAutoDeleted.f,
+      htmlTemplate = html.emacHelpdeskBulkDeenrolmentFileAutoDeleted.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
